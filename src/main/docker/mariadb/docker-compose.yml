@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mariadb:10.4
+    container_name: datasources-db
+    ports:
+      - 3333:3306
+    environment:
+      - MARIADB_ROOT_PASSWORD=pw
+      - MARIADB_DATABASE=administrative
+
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
