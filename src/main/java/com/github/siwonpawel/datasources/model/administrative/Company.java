@@ -4,12 +4,13 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
+@lombok.Data
 @Entity
-public class Company {
+public class Company
+{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column

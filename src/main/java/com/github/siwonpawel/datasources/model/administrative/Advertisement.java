@@ -1,10 +1,8 @@
 package com.github.siwonpawel.datasources.model.administrative;
 
-import lombok.Data;
-
 import javax.persistence.*;
 
-@Data
+@lombok.Data
 @Entity
 public class Advertisement {
 

@@ -27,10 +27,10 @@ USE c_1_db_1;
 CREATE TABLE data
 (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    databaseName VARCHAR(20)
+    database_name VARCHAR(20)
 );
 
-INSERT INTO data(databaseName) VALUE('c_1_db_1');
+INSERT INTO data(database_name) VALUE('c_1_db_1');
 
 CREATE DATABASE c_1_db_2;
 USE c_1_db_2;
@@ -38,7 +38,7 @@ USE c_1_db_2;
 CREATE TABLE data
 (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    databaseName VARCHAR(20)
+    database_name VARCHAR(20)
 );
 
-INSERT INTO data(databaseName) VALUE('c_1_db_2');
+INSERT INTO data(database_name) VALUE('c_1_db_2');
