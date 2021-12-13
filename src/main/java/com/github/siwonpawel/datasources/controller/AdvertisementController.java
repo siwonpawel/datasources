@@ -24,9 +24,9 @@ public class AdvertisementController
     private AdvertisementService advertisementService;
 
     @PostMapping
-    public Advertisement add(@RequestBody Advertisement advertisement)
+    public Advertisement add(@PathVariable Long companyId, @RequestBody Advertisement advertisement)
     {
-        return advertisementService.add(advertisement);
+        return advertisementService.add(companyId, advertisement);
     }
 
     @GetMapping("/{advertisementId}")
@@ -36,13 +36,13 @@ public class AdvertisementController
     }
 
     @PutMapping("/{advertisementId}")
-    public Advertisement update(@PathVariable Long advertisementId, @RequestBody Advertisement advertisement)
+    public Advertisement update(@PathVariable Long companyId, @PathVariable Long advertisementId, @RequestBody Advertisement advertisement)
     {
         return advertisementService.updateById(advertisementId, advertisement);
     }
 
     @DeleteMapping("/{advertisementId}")
-    public void update(@PathVariable Long advertisementId)
+    public void delete(@PathVariable Long advertisementId)
     {
         advertisementService.deleteById(advertisementId);
     }
