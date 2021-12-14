@@ -1,1 +1,265 @@
-{"_type":"export","__export_format":4,"__export_date":"2021-12-14T15:52:40.427Z","__export_source":"insomnia.desktop.app:v2021.7.2","resources":[{"_id":"req_0d5e4795ed904731ae4d65bf70b2c25e","parentId":"fld_9532650fb5184d7f83a54882cec5cbf9","modified":1639146167596,"created":1639146127704,"url":"{{ _.baseUrl }}/company","name":"Get all","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1639146127704,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_9532650fb5184d7f83a54882cec5cbf9","parentId":"wrk_4db19d680d3247e28c1ea48197f426d9","modified":1639146337848,"created":1639146118020,"name":"Company management","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1639146118120,"_type":"request_group"},{"_id":"wrk_4db19d680d3247e28c1ea48197f426d9","parentId":null,"modified":1639146096177,"created":1639146096177,"name":"datasources","description":"","scope":"collection","_type":"workspace"},{"_id":"req_4e0d2ce33e464bb2ae5202080e37d6b6","parentId":"fld_9532650fb5184d7f83a54882cec5cbf9","modified":1639428314059,"created":1639146181194,"url":"{{ _.baseUrl }}/company","name":"Add new company","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"url\": \"http://example.com/company/new/1\"\t\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json","id":"pair_12600078413a480c8c44133dc3261a4c"}],"authentication":{},"metaSortKey":-1639146127654,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_31bd2e06c56f4822a9e3e2fb38ee24bc","parentId":"fld_e45da947c4654e6d8c6f2f75e8de124e","modified":1639146608042,"created":1639146346619,"url":"{{ _.baseUrl }}/company/1/advertisement","name":"Get all","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1639146346619,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_e45da947c4654e6d8c6f2f75e8de124e","parentId":"wrk_4db19d680d3247e28c1ea48197f426d9","modified":1639426044536,"created":1639146315804,"name":"Advertisement","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1639146118107.5,"_type":"request_group"},{"_id":"req_683ebd61ea384729a1aa5ef7e13c496c","parentId":"fld_e45da947c4654e6d8c6f2f75e8de124e","modified":1639428627694,"created":1639146384204,"url":"{{ _.baseUrl }}/company/1/advertisement","name":"Add new advertisement","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"description\": \"manually created by user\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json","id":"pair_c34498191cec4181b307559bf7e697ba"}],"authentication":{},"metaSortKey":-1639146237161.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_fe2cf9aff09f4ae0a5ceb4357bac5305","parentId":"fld_03f3efc6817e428299b84e0736da1e80","modified":1639426222717,"created":1639426050633,"url":"{{ _.baseUrl }}/company/{{ _.company }}/advertisement/{{ _.advertisement }}/data","name":"Get all records","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1639426050633,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_03f3efc6817e428299b84e0736da1e80","parentId":"wrk_4db19d680d3247e28c1ea48197f426d9","modified":1639428647945,"created":1639426030850,"name":"Advertisement records","description":"","environment":{"company":1,"advertisement":7},"environmentPropertyOrder":{"&":["company","advertisement"]},"metaSortKey":-1639146118095,"_type":"request_group"},{"_id":"req_0aa84c5555e54953bbb13c3b8b90f42a","parentId":"fld_03f3efc6817e428299b84e0736da1e80","modified":1639497130600,"created":1639426234063,"url":"{{ _.baseUrl }}/company/{{ _.company }}/advertisement/{{ _.advertisement }}/data","name":"Create new record","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"value\": \"I've created this!\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json","id":"pair_f68a82a1ba144078af94c2283daaed50"}],"authentication":{},"metaSortKey":-1639426050583,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_e4b9be028f1acb824f43d078db253b5996ed30ac","parentId":"wrk_4db19d680d3247e28c1ea48197f426d9","modified":1639146148863,"created":1639146096190,"name":"Base Environment","data":{"baseUrl":"http://localhost:8080"},"dataPropertyOrder":{"&":["baseUrl"]},"color":null,"isPrivate":false,"metaSortKey":1639146096190,"_type":"environment"},{"_id":"jar_e4b9be028f1acb824f43d078db253b5996ed30ac","parentId":"wrk_4db19d680d3247e28c1ea48197f426d9","modified":1639146096192,"created":1639146096192,"name":"Default Jar","cookies":[],"_type":"cookie_jar"},{"_id":"spc_2f7e0beceaaa4302952e07f72a471c04","parentId":"wrk_4db19d680d3247e28c1ea48197f426d9","modified":1639146096179,"created":1639146096179,"fileName":"datasources","contents":"","contentType":"yaml","_type":"api_spec"}]}
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-12-14T15:52:40.427Z",
+  "__export_source": "insomnia.desktop.app:v2021.7.2",
+  "resources": [
+    {
+      "_id": "req_0d5e4795ed904731ae4d65bf70b2c25e",
+      "parentId": "fld_9532650fb5184d7f83a54882cec5cbf9",
+      "modified": 1639146167596,
+      "created": 1639146127704,
+      "url": "{{ _.baseUrl }}/company",
+      "name": "Get all",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1639146127704,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_9532650fb5184d7f83a54882cec5cbf9",
+      "parentId": "wrk_4db19d680d3247e28c1ea48197f426d9",
+      "modified": 1639146337848,
+      "created": 1639146118020,
+      "name": "Company management",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1639146118120,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_4db19d680d3247e28c1ea48197f426d9",
+      "parentId": null,
+      "modified": 1639146096177,
+      "created": 1639146096177,
+      "name": "datasources",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_4e0d2ce33e464bb2ae5202080e37d6b6",
+      "parentId": "fld_9532650fb5184d7f83a54882cec5cbf9",
+      "modified": 1639428314059,
+      "created": 1639146181194,
+      "url": "{{ _.baseUrl }}/company",
+      "name": "Add new company",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"url\": \"http://example.com/company/new/1\"\t\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_12600078413a480c8c44133dc3261a4c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1639146127654,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_31bd2e06c56f4822a9e3e2fb38ee24bc",
+      "parentId": "fld_e45da947c4654e6d8c6f2f75e8de124e",
+      "modified": 1639146608042,
+      "created": 1639146346619,
+      "url": "{{ _.baseUrl }}/company/1/advertisement",
+      "name": "Get all",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1639146346619,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e45da947c4654e6d8c6f2f75e8de124e",
+      "parentId": "wrk_4db19d680d3247e28c1ea48197f426d9",
+      "modified": 1639426044536,
+      "created": 1639146315804,
+      "name": "Advertisement",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1639146118107.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_683ebd61ea384729a1aa5ef7e13c496c",
+      "parentId": "fld_e45da947c4654e6d8c6f2f75e8de124e",
+      "modified": 1639428627694,
+      "created": 1639146384204,
+      "url": "{{ _.baseUrl }}/company/1/advertisement",
+      "name": "Add new advertisement",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"description\": \"manually created by user\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c34498191cec4181b307559bf7e697ba"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1639146237161.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fe2cf9aff09f4ae0a5ceb4357bac5305",
+      "parentId": "fld_03f3efc6817e428299b84e0736da1e80",
+      "modified": 1639426222717,
+      "created": 1639426050633,
+      "url": "{{ _.baseUrl }}/company/{{ _.company }}/advertisement/{{ _.advertisement }}/data",
+      "name": "Get all records",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1639426050633,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_03f3efc6817e428299b84e0736da1e80",
+      "parentId": "wrk_4db19d680d3247e28c1ea48197f426d9",
+      "modified": 1639428647945,
+      "created": 1639426030850,
+      "name": "Advertisement records",
+      "description": "",
+      "environment": {
+        "company": 1,
+        "advertisement": 7
+      },
+      "environmentPropertyOrder": {
+        "&": [
+          "company",
+          "advertisement"
+        ]
+      },
+      "metaSortKey": -1639146118095,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0aa84c5555e54953bbb13c3b8b90f42a",
+      "parentId": "fld_03f3efc6817e428299b84e0736da1e80",
+      "modified": 1639497130600,
+      "created": 1639426234063,
+      "url": "{{ _.baseUrl }}/company/{{ _.company }}/advertisement/{{ _.advertisement }}/data",
+      "name": "Create new record",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"value\": \"I've created this!\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_f68a82a1ba144078af94c2283daaed50"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1639426050583,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_e4b9be028f1acb824f43d078db253b5996ed30ac",
+      "parentId": "wrk_4db19d680d3247e28c1ea48197f426d9",
+      "modified": 1639146148863,
+      "created": 1639146096190,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:8080"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1639146096190,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_e4b9be028f1acb824f43d078db253b5996ed30ac",
+      "parentId": "wrk_4db19d680d3247e28c1ea48197f426d9",
+      "modified": 1639146096192,
+      "created": 1639146096192,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_2f7e0beceaaa4302952e07f72a471c04",
+      "parentId": "wrk_4db19d680d3247e28c1ea48197f426d9",
+      "modified": 1639146096179,
+      "created": 1639146096179,
+      "fileName": "datasources",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
